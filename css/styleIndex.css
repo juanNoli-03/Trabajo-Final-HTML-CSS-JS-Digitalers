@@ -117,7 +117,7 @@ footer > img {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-image: url(../imagenes/fondo.webp);
+    background-image: url(../imagenes/fondo.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
