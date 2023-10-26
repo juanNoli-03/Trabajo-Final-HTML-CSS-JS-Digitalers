@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styleIndex.css">
+    <link rel="shortcut icon" href="./imagenes/blindaje.png" type="image/x-icon">
+    <script defer src="./js/scriptIndex.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <title>TuSeguro</title>
+</head>
+<body>
+    <!--Header y nav de la pagina. Incluimos details que se despliega con los datos del form y el boton que nos muestra
+    la cotización del dolar-->
+    <header id="header">
+        <nav>
+            <img src="./imagenes/blindaje.gif" alt="">
+            <h1>TuSeguro.com</h1>
+            <h3 class="numeroTel"><img src="./imagenes/telefono.png" alt="">0815 - 366 - 2536</h3>
+            <button id="boton-cotizacion-dolar"><h3><img src="./imagenes/dolar.gif" alt="">COTIZACION ACTUAL DOLAR BLUE!</h3></button>
+        </nav>
+        
+        <!--Details que se despliega y muestra los datos ingresados en el FORM-->
+        <section class="details-section" id="details-section">
+            <details close id="details">
+                <summary>Ver datos ingresados hasta el momento</summary>
+                    <section class="details-info" id="details-info">
+                    
+                    </section>
+            </details>
+        </section>
+
+    </header>
+    <!--------------------------------------------------------------------------------->
+
+    <!---Main de la pagina que contiene a todo el form-->
+    <main id = "main">
+        <section class="main-intro">
+            <div class="section-titles">
+                <h1>TuSeguro</h1>
+                <h2>Con nosotros, estás a salvo.</h2>
+            </div>
+        </section>
+
+    <form id="formDatos">    
+            <div class="form-intro">
+                <h2>Cotizá tu seguro</h2>
+                <hr>
+                <h4>Ingresá los datos de tu Vehiculo:</h4>
+            </div>
+        
+        <section class="datosVehiculo">
+            <div class="opcionAño">
+                <label for="selectAño">Año</label>    
+                <select name="año" id="selectAño" required = "true">
+                    <option value="" disabled selected hidden>Seleccione el año</option>
+                    <option value="2023">2023 - 0km</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2014</option>
+                    <option value="2013">2013</option>
+                    <option value="2012">2012</option>
+                    <option value="2011">2011</option>
+                    <option value="2010">2010</option>
+                    <option value="2009">2009</option>
+                    <option value="2008">2008</option>
+                    <option value="2007">2007</option>
+                    <option value="2006">2006</option>
+                </select>
+            </div>
+
+            <div class="opcionDoble">
+                <div class="opcionDobleIzq">
+                    <label for="selectorMarca">Marca</label>    
+                    <select name="año" id="selectorMarca" required = "true">
+                        <option value="" disabled selected hidden>Seleccione la Marca</option>
+                        <option value="Alfa Romeo">Alfa Romeo</option>
+                        <option value="Audi">Audi</option>
+                        <option value="BMW">BMW</option>
+                        <option value="Chevrolet">Chevrolet</option>
+                        <option value="Citroen">Citroen</option>
+                        <option value="Fiat">Fiat</option>
+                        <option value="Ford">Ford</option>
+                        <option value="Honda">Honda</option>
+                        <option value="Jeep">Jeep</option>
+                        <option value="Mercedes Benz">Mercedes Benz</option>
+                        <option value="Peugeot">Peugeot</option>
+                        <option value="Renault">Renault</option>
+                        <option value="Toyota">Toyota</option>
+                        <option value="Volkswagen">Volkswagen</option>
+                    </select>
+                </div>
+
+                <div class="opcionDobleDer">
+                    <label for="selectorModelo">Modelo</label>    
+                    <select name="año" id="selectorModelo" required = "true">
+                        <option value="" disabled selected hidden>Seleccione el Modelo</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="opcionGNC">
+                <label>Tiene GNC?</label>
+                <div class="checkBox-container">
+                    <input type="checkbox" name="" id="inputSiGNC" required = "true">
+                    <label for="inputSi">Si</label>
+                    <input type="checkbox" name="" id="inputNoGNC" class="inputIzq" required = "true">
+                    <label for="inputNo" class="labelIzq">No</label>
+                </div>
+            </div>
+        </section>
+
+        <section class="datosPersonales">
+            <div class="form-intro">
+                <hr>
+                <h4>Ingresá tus Datos Personales:</h4>
+            </div>
+
+            <div class="opcionDoble">
+                <div class="opcionDobleIzq">
+                    <label for="selectorProvincia">Provincia</label>  
+                        <select name="año" id="selectorProvincia" required = "true">
+                            <option value="" disabled selected hidden>Seleccione su Provincia</option>
+                        </select>
+                </div>
+                <div class="opcionDobleDerInput">
+                    <label for="inputLocalidad">Localidad</label>  
+                    <input type="text" placeholder="Ingrese la Localidad" required = "true" id="inputLocalidad">
+                </div>
+            </div>
+
+            <div class="opcionDoble">
+                <div class="opcionDobleIzqInput">
+                    <label for="inputMunicipio">Municipio</label>  
+                    <input type="text" placeholder="Ingrese el Municipio" required = "true" id="inputMunicipio">
+                </div>
+                <div class="opcionDobleDerInput">
+                    <label for="inputCP">Codigo Postal</label>  
+                    <input type="text" placeholder="Ingrese el CP" required = "true" id="inputCP">
+                    <h5><a href="https://www.correoargentino.com.ar/formularios/cpa">No sé mi código</a></h5>
+                </div>
+            </div>
+
+            <div class="opcionMail">
+                <label for="inputEmail">E-mail</label>
+                <input type="text" name="" id="inputEmail" placeholder="Ingrese su E-Mail" required = "true">
+            </div>
+
+            <div class="opcionDoble">
+                <div class="opcionDobleIzqInput">
+                    <label for="inputCodigo">Código Área</label>  
+                    <input type="text" placeholder="Codigo" required = "true" maxlength="2" id="inputCodigo">
+                </div>
+                <div class="opcionDobleDerInput">
+                    <label for="inputTel">Número</label>  
+                    <input type="tel" value="15" minlength="10" maxlength="10" id="inputTel" required = "true">
+                </div>
+            </div>
+
+            <div class="form-intro">
+                <hr>
+                <h4>Fecha de inicio del Seguro:</h4>
+            </div>
+
+            <div class="opcionFecha">
+                <input type="date" required = "true" id="inputFecha">
+                <hr>
+            </div>
+        </section>
+
+            <div class="planes-intro">
+                <h1>Elegí tu plan!</h1>
+            </div>
+            <section class="planes">
+                <div class="card-container" id="card-container-izq">
+                    <h1>Terceros Completo</h1>
+                    <h4 id="gama">Precio base por gama del auto (----):</h4>
+                    <h2 id="precioPlanBas">$-------</h2>
+                    <hr>
+                    <div class="card-info" id="infoTercerosCompleto">
+                        <h3>Coberturas incluidas:</h3>
+                        <div class="incluye">
+                            <p><img src="./imagenes/tilde.png" alt="">Responsabilidad Civil</p>
+                            <p><img src="./imagenes/tilde.png" alt="">Asistencia Mecánica y remolque hasta 6 veces</p>
+                            <p><img src="./imagenes/tilde.png" alt="">Daños, incendio y robo total</p>
+                            <p><img src="./imagenes/tilde.png" alt="">Robo e incendio parcial</p>
+                            <p><img src="./imagenes/tilde.png" alt="">Cerraduras y cristales laterales</p>
+                        </div>
+                        <h3>No incluye:</h3>
+                        <div class="noIncluye">
+                            <p><img src="./imagenes/cruz.png" alt="">Luneta y Parabrisas</p>
+                            <p><img src="./imagenes/cruz.png" alt="">Daños por granizo</p>
+                            <p><img src="./imagenes/cruz.png" alt="">Daños parciales por accidente</p>
+                        </div>
+                    </div>
+
+                    <div class="total">
+                        <h1> <img src="./imagenes/dinero.png" alt="">Precio Total:</h1>
+                        <h2 id="precioTotalTerceros">---</h2>
+                    </div>
+
+                    <div class="input-container">
+                        <input type="checkbox" id="checkbox-card-izq" required = "true">                      
+                    </div>
+                </div>
+
+                <div class="card-container" id="card-container-centro">
+                    <h1>Terceros Completo con Granizo</h1>
+                    <h4 id="gama">Precio base por gama del auto (----):</h4>
+                    <h2 id="precioPlanMed">$-------</h2>
+                    <hr>
+                    <h4>Elegí tu cobertura de granizo:</h4>
+                        <div class="opciones">
+                            <label for="sinLimite">Sin Limite </label>
+                            <input type="checkbox" id="sinLimite" required = "true">
+
+                            <label for="conLimite">Hasta $400.000</label>
+                            <input type="checkbox" id="conLimite" required = "true">
+                        </div>
+                    <hr>
+                    <div class="card-info" id="infoTercerosCompGranizo">
+                        <h3>Coberturas incluidas:</h3>
+                        <div class="incluye" id="coberturasTercerosGranizo">
+                            <p><img src="./imagenes/tilde.png" alt="">Responsabilidad Civil</p>
+                            <p><img src="./imagenes/tilde.png" alt="">Asistencia Mecánica y remolque las veces que necesites</p>
+                            <p><img src="./imagenes/tilde.png" alt="">Daños, incendio y robo total</p>
+                            <p><img src="./imagenes/tilde.png" alt="">Robo e incendio parcial</p>
+                            <p><img src="./imagenes/tilde.png" alt="">Cerraduras y cristales laterales</p>
+                            <p><img src="./imagenes/tilde.png" alt="">Luneta y Parabrisas</p>
+                            <p></p>
+                        </div>
+                        <h3>No incluye:</h3>
+                        <div class="noIncluye">
+                            <p><img src="./imagenes/cruz.png" alt="">Daños parciales por accidente</p>
+                        </div>
+                    </div>
+                    
+                    <div class="total">
+                        <h1> <img src="./imagenes/dinero.png" alt="">Precio Total:</h1>
+                        <h2 id="precioTotalTercerosGranizo">---</h2>
+                    </div>
+
+                    <div class="input-container">
+                        <input type="checkbox" id="checkbox-card-centro" required = "true">             
+                    </div>
+                </div>
+
+                <div class="card-container" id="card-container-der">
+                    <h1>Todo Riesgo con Franquicia</h1>
+                    <h4 id="gama">Precio base por gama del auto (----):</h4>
+                    <h2 id="precioPlanAlto">$-------</h2>
+                    <hr>
+                    <h4>Elegí tu franquicia fija:</h4>
+                    <div class="opciones" id="opcionesFranquicias">
+                            <label for="checkboxIzq">$30.000</label>
+                            <input type="checkbox" id="checkboxIzq" required = "true">
+                            <label for="checkboxCentro">$40.000</label>
+                            <input type="checkbox" id="checkboxCentro" required = "true">
+                            <label for="checkboxDer">$50.000</label>
+                            <input type="checkbox" id="checkboxDer" required = "true">
+                    </div>
+                    <hr>
+                    <div class="card-info" id="infoTodoRiesgo">
+                        <h3>Coberturas incluidas:</h3>
+                        <div class="incluye" id="divCoberturasTodoRiesgo">
+                            <p><img src="./imagenes/tilde.png" alt="">Responsabilidad Civil</p>
+                            <p><img src="./imagenes/tilde.png" alt="">Asistencia Mecánica y remolque las veces que necesites</p>
+                            <p><img src="./imagenes/tilde.png" alt="">Daños, incendio y robo total</p>
+                            <p><img src="./imagenes/tilde.png" alt="">Robo e incendio parcial</p>
+                            <p><img src="./imagenes/tilde.png" alt="">Cerraduras y cristales laterales</p>
+                            <p><img src="./imagenes/tilde.png" alt="">Luneta y Parabrisas</p>
+                            <p><img src="./imagenes/tilde.png" alt="">Daños por granizo sin limite</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="total">
+                        <h1> <img src="./imagenes/dinero.png" alt="">Precio Total:</h1>
+                        <h2 id="precioTotalTodoRiesgo">---</h2>
+                    </div>
+                    <div class="input-container">
+                        <input type="checkbox" id="checkbox-card-der" required = "true">                      
+                    </div>
+                </div>
+            </section>
+
+            <section class="infoAdicional" id="infoAdicional">
+                <div class="form-intro">
+                    <hr>
+                    <h4>Informacion Adicional:</h4>
+                </div>
+                <div class="membresia">
+                    <label for="">Sos socio de TuSeguro? De serlo obtendras 15% de descuento en el precio final.</label>
+                    <div class="checkBox-container">
+                        <input type="checkbox" name="" id="inputSiInfo" required = "true">
+                        <label for="inputSi">Si</label>
+                        <input type="checkbox" name="" id="inputNoInfo" class="inputIzq" required = "true">
+                        <label for="inputNo" class="labelIzq">No</label>
+                    </div>
+                </div>
+
+                <div class="cotizacionEnDolares">
+                    <label for="">Prefieres realizar la cotizacion en dolares? Hay 30% de descuento en el precio final.</label>
+                    <div class="checkBox-container">
+                        <input type="checkbox" name="" id="inputSiDolares" required = "true">
+                        <label for="inputSi">Si</label>
+                        <input type="checkbox" name="" id="inputNoDolares" class="inputIzq" required = "true">
+                        <label for="inputNo" class="labelIzq">No</label>
+                    </div>
+                </div>
+                <hr>
+            </section>
+
+            <div class="form-cierre">
+                <button type="submit">COTIZAR</button>
+            </div>
+    </form>
+
+       
+    </main>
+    <!--------------------------------------------------------------------------------->
+
+    <footer>
+            <img src="./imagenes/blindaje.gif" alt="">
+            <h1>TuSeguro.com</h1>
+    </footer>
+    
+    <!---MODAL-->
+    <div id="modal-generico">
+        <div class="modal-contenido">
+            <span class="close-modal" id="close-modal"><img src="./imagenes/cruz.png" alt=""></span>
+            <div class="modal-title" id = "modal-title">
+                
+            </div>
+            <div id="modal-info">
+            
+            </div>
+        </div>
+    </div>
+    <!--------------------------------------------------------------------------------->
+</body>
+</html>
